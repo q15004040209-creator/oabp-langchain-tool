@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "oabp-langchain-tool"
+version = "0.1.0"
+description = "LangChain BaseTool wrapper for the Open Agent Bounty Protocol (OABP/AIP-1) API"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+authors = [{name = "sogoodsmart-aigen-worker"}]
+dependencies = ["langchain-core>=0.2.0"]
+
+[project.optional-dependencies]
+test = ["pytest>=8.0"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
